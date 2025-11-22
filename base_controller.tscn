@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b2vdv4tsbkrow"]
 
 [ext_resource type="PackedScene" uid="uid://b2kq5erlme841" path="res://scenes/menu/settings_menu/settings_menu.tscn" id="1_dvgid"]
-[ext_resource type="Script" path="res://scenes/controller/scene_dock.gd" id="2_jptrm"]
-[ext_resource type="Script" path="res://scenes/controller/menu_music.gd" id="2_syw7r"]
+[ext_resource type="Script" uid="uid://dmhpte1juaj6q" path="res://scenes/controller/scene_dock.gd" id="2_jptrm"]
+[ext_resource type="Script" uid="uid://11gn2n5pek7f" path="res://scenes/controller/menu_music.gd" id="2_syw7r"]
 [ext_resource type="PackedScene" uid="uid://c72tadrko6hg0" path="res://scenes/menu/buttons/ButtonWrapper/button_wrapper.tscn" id="4_q6dp4"]
 [ext_resource type="PackedScene" uid="uid://cnlm6ho48juqv" path="res://scenes/menu/main_menu/main_menu.tscn" id="4_xg1l1"]
 [ext_resource type="PackedScene" uid="uid://c31dprby61dbw" path="res://scenes/menu/buttons/ButtonSettings/settings_button.tscn" id="5_dhblv"]
@@ -35,10 +35,8 @@ offset_bottom = 100.0
 
 [node name="MainMenu" parent="." instance=ExtResource("4_xg1l1")]
 layout_mode = 1
-offset_left = -121.0
-offset_top = -104.0
-offset_right = -121.0
-offset_bottom = -104.0
+offset_top = 1.0
+offset_bottom = 1.0
 
 [connection signal="settings_switched" from="SettingsMenu" to="SceneDock" method="_on_settings_switched"]
 [connection signal="level_ended" from="SceneDock" to="AudioStreamPlayer2D" method="_on_scene_dock_level_ended"]
